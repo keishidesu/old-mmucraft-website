@@ -1,0 +1,32 @@
+<div class="row justify-content-center gl-fullscreen">
+  <div class="col-12 col-md-6">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <% if (locals.alert) { %>
+        <div class="alert alert-<%= alert %>" role="alert">
+          <%= message %>
+        </div>
+        <% } %>
+      </div>
+      <div class="col-12 d-none d-md-block">
+        <div class="p-2 bg-dark rounded gl-shadow text-light text-center">
+          <h4>Create account</h4>
+        </div>
+      </div>
+    </div>
+    <form method="post" class="mt-2 p-4 bg-dark rounded gl-shadow text-light">
+      <div class="form-group">
+        <label for="nameInput">Username</label>
+        <input type="text" name="username" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter username" required>
+        <small id="nameHelp" class="form-text text-danger">This name will be use as in-game name. Not just a login username!</small>
+      </div>
+      <div class="form-group">
+        <label for="passInput">Password</label>
+        <input type="password" name="password" class="form-control" id="passInput" aria-describedby="passHelp" placeholder="Enter password" required>
+        <small id="passHelp" class="form-text text-danger">There is no password confirmation input here. Make sure you spelled your password correctly!</small>
+      </div>
+      <input class="text-input" type="hidden" name="token" value="<%= token %>">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+  </div>
+</div>

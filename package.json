@@ -1,0 +1,49 @@
+{
+  "name": "mmucraft-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prostart": "node ./bin/www",
+    "test": "./node_modules/.bin/mocha",
+    "start": "./node_modules/.bin/nodemon ./bin/www",
+    "model": "node ./node_modules/sequelize-auto-v3/bin/sequelize-auto",
+    "import": "node ./models"
+  },
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "discord-markdown": "^2.3.1",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "hashids": "^2.0.1",
+    "helmet": "^3.21.1",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.5.0",
+    "marked": "^0.7.0",
+    "md5": "^2.2.1",
+    "morgan": "~1.9.1",
+    "mysql2": "^1.7.0",
+    "nbt": "^0.8.1",
+    "nodemailer": "^6.3.1",
+    "popper.js": "^1.16.0",
+    "request": "^2.88.0",
+    "sequelize": "^5.21.1",
+    "utf8": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tajam/mmucraft-website.git"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "sequelize-auto-v3": "^0.6.1"
+  }
+}

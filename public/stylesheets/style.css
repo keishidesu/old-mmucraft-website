@@ -1,0 +1,271 @@
+.navbar-dark-2 {
+  background-color: #1f2233 !important;
+  color: white;
+}
+
+.lm-wide {
+  /*left padding wide*/
+  padding-left: 15vw;
+}
+
+.rm-wide {
+  /*right padding wide*/
+  padding-right: 15vw;
+}
+
+.navbar-tall {
+  min-height: 80px;
+}
+
+.collapsing {
+  -webkit-transition: height .1s ease;
+       -o-transition: height .1s ease;
+          transition: height .1s ease;
+}
+
+.navbar-text {
+  font-family: 'Prompt', sans-serif;
+}
+
+.black-bottom-border {
+  border-bottom: solid 1px #111;
+}
+
+.mmucraft-logo {
+  font-family: 'Righteous', cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.mmucraft-logo span {
+  color: #74e09c;
+}
+
+.login-wrapper, .section-title{
+  background-image: url('/images/bg-dark.jpg');
+  background-position: 30% 30%;
+  background-size: cover;
+  box-shadow: 0px -55px 500px 10px #000 inset;
+}
+
+.info-title-wrapper{
+  background-image: url('/images/spawn-center.png');
+  background-position: 0% 30%;
+  background-size: cover;
+  box-shadow: 0px -55px 500px 10px #000 inset;
+}
+
+.fill-height{
+  height: 100%;
+}
+
+.strong-title {
+  font-family: 'Prompt', sans-serif;
+}
+
+.white{
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.server-ip:before{
+  content: "〉";
+  font-family: 'Prompt', sans-serif;
+}
+
+.server-ip{
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-left: 8px;
+  font-size: 12pt;
+  margin-bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+.top-thick-border{
+  border-top: solid 5px #1f2233AA;
+}
+
+.left-thick-border {
+  border-left: solid 5px #1f2233AA;
+}
+
+.right-thick-border {
+  border-right: solid 5px #1f2233;
+}
+
+.solid-border {
+  border-left: solid 1px #AAA;
+  border-right: solid 1px #AAA;
+  border-top: solid 1px #AAA;
+  border-bottom: solid 1px #AAA;
+}
+
+.border-none {
+  border: none;
+}
+
+.login-input{
+  border-radius: none;
+  padding: 5px 10px 5px 12px;
+  font-size: 10pt;
+  width: 100%;
+}
+
+.login-button {
+  background-color: #4551f9;
+  color: white;
+  text-transform: uppercase;
+}
+
+.tall{
+  min-height: 100px;
+}
+
+.padding-sm {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-lg {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bg-light-dark{
+  background-color: #777;
+}
+
+/* Text*/
+.xl-text{
+  font-size: 50pt;
+}
+
+.lg-text{
+  font-size: 18pt;
+}
+
+.md-text{
+  font-size: 12pt;
+}
+
+.sm-text{
+  font-size: 10pt;
+}
+
+@media only screen and (min-width: 768px) {
+  .lg-text-md{
+    font-size: 24pt;
+  }
+
+  .md-text-md{
+    font-size: 18pt;
+  }
+}
+
+/* End: Text*/
+
+.lp-small{
+  padding-left: 20px;
+}
+
+.card-small{
+  width: 300px;
+  border-bottom: solid 5px #EEE;
+  margin: auto;
+  padding: 20px 30px;
+  color: #222;
+}
+
+.card-small:hover{
+  border-bottom: solid 5px #e8666e;
+}
+
+.footer{
+  border-top: dashed 2px #1f2233;
+  position: relative;
+}
+
+.credit{
+  width: 100vw;
+  font-size: 8pt;
+  position: absolute;
+}
+
+hr{
+    border: none;
+    height: 4px;
+
+    color: lightgray; /* old IE */
+    background-color: lightgray; /* Modern Browsers */
+}
+
+.new-nav-tabs a{
+  color: #333;
+  text-decoration: none;
+  border-bottom: solid 3px #EEE !important;
+}
+
+.new-nav-tabs a.active{
+  border: none !important;
+  border-radius: none !important;
+  border-bottom: solid 3px #e8666e !important;
+}
+
+.new-nav-tabs a:hover{
+  color: #1f2233;
+}
+
+.user-info-wrapper{
+  box-shadow: 0px 0px 15px -5px rgba(0.2, 0.2, 0.2, 0.3);
+  margin-top: 0.8rem;
+}
+
+.avatar{
+  background-color: white;
+  border-radius: 6px;
+}
+
+.avatar img{
+  padding: 8px;
+  border: solid 1px gray;
+  border-radius: 6px;
+}
+
+.body-skin{
+  border-top: solid 2px #AAA;
+  border-bottom: solid 2px #AAA;
+  border-radius: 16px;
+}
+
+.shadow-inset-sm{
+  box-shadow: 0px 0px 5px 2px rgba(0.2, 0.2, 0.2, 0.3) inset;
+}
+
+.shadow-inset-md{
+  box-shadow: 0px 0px 20px -2px rgba(0.2, 0.2, 0.2, 0.3) inset;
+}
+
+.online{
+  font-size: 10pt;
+  color: green;
+}
+
+.offline{
+  font-size: 10pt;
+  color: yellow;
+}
+
+@media only screen and (min-width: 768px) {
+  .display-none-md{
+    display: none;
+  }
+}
+
+.bold{
+  font-weight: bold;
+}

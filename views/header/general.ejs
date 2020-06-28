@@ -1,0 +1,15 @@
+<head>
+  <%- include('requirements/meta'); -%>
+  <%- include('requirements/bootstrap'); -%>
+  <%- include('requirements/general'); -%>
+
+  <%-defineContent('head-extend')%>
+
+  <title>
+  	<% if (locals.title) { %>
+      <%= title %> | MMUCraft
+    <% } else { %>
+      MMUCraft
+    <% } %>
+  </title>
+</head>

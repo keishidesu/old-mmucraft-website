@@ -1,0 +1,245 @@
+<div class="container mt-md-5 py-5 px-md-5 card bg-dark" style="color:white;">
+  <div class="row">
+    <div class="col-md-3">
+        <div class="mx-auto py-5 px-md-5 py-md-5">
+          <img class="mx-auto d-block" src="<%= user.info.bodyskin %>" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center py-1" style="border-bottom: solid 1px lightgray;">
+                <b>IGN</b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center pt-1 pb-3">
+              <%= user.info.name %>
+              <% if (user.info.online) {%>
+                <span style="color:yellow">(online)</span>
+              <%} else {%>
+                <span style="color:gray">(offline)</span>
+              <%}%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center py-1" style="border-bottom: solid 1px lightgray;">
+                <b>Last Login</b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center pt-1 pb-3">
+              <%= user.info.lastLogin %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center py-1" style="border-bottom: solid 1px lightgray;">
+                <b>Coordinate</b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-right py-1">
+              <b>X:</b>
+            </div>
+            <div class="col py-1">
+              <%= user.info.coordinate.x %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-right py-1">
+              <b>Y:</b>
+            </div>
+            <div class="col py-1">
+              <%= user.info.coordinate.y %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-right pt-1 pb-3">
+              <b>Z:</b>
+            </div>
+            <div class="col py-1">
+              <%= user.info.coordinate.z %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center py-1" style="border-bottom: solid 1px lightgray;">
+                <b>Last World</b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center py-1">
+              <%= user.info.world %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+              <a class="btn bg-light my-5 px-5" href="/u/logout">Logout</a>
+          </div>
+        </div>
+    </div>
+    <div class="col pt-4 pt-md-0">
+      <h2 class="text-center">Ranking</h2>
+      <div class="container-fluid">
+        <!-- First Row -->
+        <div class="row text-center">
+          <div class="col-md-6 card my-3 mx px-0 bg-secondary">
+            <div class="card-header mx-0">
+              <img style="width: auto; height: 80px;" src="../../images/eye-of-ender.png" alt="Eye of Ender" />
+              <h4 class="card-title pt-4">Slayer (Ranked #<%= user.ranks.boss.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>You have slain:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Wither</div>
+                  <div><%= user.ranks.boss.summary.wither %></div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Ender Dragon</div>
+                  <div><%= user.ranks.boss.summary.ender_dragon %></div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Elder Guardian</div>
+                  <div><%= user.ranks.boss.summary.elder_guardian %></div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+                <div class="list-group-item bg-dark d-flex justify-content-between">
+                  <div>Total</div>
+                  <div><%= user.ranks.boss.summary.total %> Points</div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 card my-3 px-0 bg-secondary">
+            <div class="card-header">
+              <img style="width: auto; height: 80px;" src="../../images/i-pickaxe.png" alt="Iron Pickaxe" />
+              <h4 class="card-title pt-4">Miner (Ranked #<%= user.ranks.mining.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>You have mined:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Emerald</div>
+                  <div><%= user.ranks.mining.summary.emerald %></div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Diamond</div>
+                  <div><%= user.ranks.mining.summary.diamond %></div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Gold</div>
+                  <div><%= user.ranks.mining.summary.gold %></div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Iron</div>
+                  <div><%= user.ranks.mining.summary.iron %></div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="list-group-item bg-dark d-flex justify-content-between">
+                <div>Total</div>
+                <div><%= user.ranks.mining.summary.total %> Points</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Second Row -->
+        <div class="row text-center">
+          <div class="col-md-6 card my-3 px-0 bg-secondary">
+            <div class="card-header mx-0">
+              <img style="width: auto; height: 80px;" src="../../images/d-sword.png" alt="Iron Sword" />
+              <h4 class="card-title pt-4">Assassin (Ranked #<%= user.ranks.player.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>Player vs Player:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Killed</div>
+                  <div><%= user.ranks.player.summary.killed %> Players</div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>Killed By</div>
+                  <div><%= user.ranks.player.summary.killed_by %> Players</div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="list-group-item bg-dark d-flex justify-content-between">
+                <div>Total</div>
+                <div><%= user.ranks.player.summary.score %> Points</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 card my-3 px-0 bg-secondary">
+            <div class="card-header">
+              <img style="width: auto; height: 80px;" src="../../images/iron-boots.png" alt="Iron Pickaxe" />
+              <h4 class="card-title pt-4">Nomad (Ranked #<%= user.ranks.travel.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>You have travelled:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>On Land</div>
+                  <div><%= user.ranks.travel.summary.land %> KM</div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>On/In Water</div>
+                  <div><%= user.ranks.travel.summary.water %> KM</div>
+                </li>
+                <li class="list-group-item bg-secondary d-flex justify-content-between">
+                  <div>On Air</div>
+                  <div><%= user.ranks.travel.summary.air %> KM</div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="list-group-item bg-dark d-flex justify-content-between">
+                <div>Total</div>
+                <div><%= user.ranks.travel.summary.total %> KM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row text-center">
+          <div class="col-md-6 card my-3 px-0 bg-secondary">
+            <div class="card-header mx-0">
+              <img style="width: auto; height: 80px;" src="../../images/heart.svg" alt="Heart (Full)" />
+              <h4 class="card-title pt-4">Spawner (Ranked #<%= user.ranks.deaths.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>Death Count:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark d-flex justify-content-between">
+                  <div>Total Death</div>
+                  <div><%= user.ranks.deaths.summary.deaths %></div>
+                </li>
+                <li class="list-group-item bg-dark d-flex justify-content-between">
+                  <div>Time Since Last Death</div>
+                  <div><%= user.ranks.deaths.summary.time_since_death %> hrs</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 card my-3 px-0 bg-secondary">
+            <div class="card-header">
+              <img style="width: auto; height: 80px;" src="../../images/clock.png" alt="Clock" />
+              <h4 class="card-title pt-4">Wisdom (Ranked #<%= user.ranks.playTime.ranked %>)</h4>
+            </div>
+            <div class="card-body">
+              <h5>Play Time by Hours:</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark d-flex justify-content-between">
+                  <div>Total</div>
+                  <div><%= user.ranks.playTime.summary.playTime %> hrs</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
