@@ -1,6 +1,7 @@
-# MMUCraft official website
+# Old MMUCraft official website
 
-Translate the existing PHP website to Node.js based website and upgrading the website services
+We are translate the existing PHP website to Node.js based website and upgrading the website services therefore this repository/code is not maintained anymore.
+[This](https://github.com/keishidesu/mmucraft-website) is the repository for the new website.
 
 # Setup
 
